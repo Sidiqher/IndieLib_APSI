@@ -46,7 +46,7 @@ Route::post('/peminjaman/kembali',[PeminjamanController::class, 'kembali']);
 
 Route::get('/buku', [BukuController::class, 'index'])->middleware('auth');
 
-Route::get('book/{Buku:slug}',[BukuController::class, 'show']);
+Route::get('book/{Buku:slug}',[BukuController::class, 'show'])->middleware('auth');
 
 Route::get('/donasi', [PengajuanController::class, 'index'])->middleware('auth');
 
